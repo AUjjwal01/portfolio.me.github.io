@@ -1,0 +1,319 @@
+@import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
+:root{
+    --ff-h1:'Prompt',sans-serif;
+    --fs-h1:6.8rem;
+    --ff-body:'Lora',serif;
+}
+html{
+  scroll-behavior: smooth;
+}
+body{margin:0;
+    top: 0;
+    background: #F9F8F6;
+    color: #0d0d0d;
+    font-size: 1.8em;
+}
+h1{
+    font-family: var(--ff-h1);
+    font-size: var(--fs-h1);
+    font-weight: 400;
+    margin-right: 3rem;
+    line-height: 150px;
+}
+
+h2{
+  font-family: var(--ff-h1);
+  font-size: 2.4em;
+  font-weight: 400;
+  letter-spacing: -2px;
+  margin:1em 1em ;
+}
+h3{
+  font-family: var(--ff-h1);
+  font-weight: 400;
+}
+header{
+  
+  top: 0;
+  width: 100%
+}
+
+.nav {
+  background-color: #F9F8F6;
+  height: 3em;
+  width: 100%;
+  border-bottom: 2px solid #0d0d0d ;
+  position: relative;
+}
+
+.nav > .nav-header {
+  display: inline;
+}
+
+.nav > .nav-header > .nav-title {
+  display: inline-block;
+  font-size: 22px;
+  
+  padding: 10px 10px 10px 10px;
+}
+
+.nav > .nav-btn {
+  display: none;
+}
+
+.nav > .nav-links {
+  display: inline;
+  float: right;
+  font-size: 18px;
+}
+
+.nav > .nav-links > a {
+  display: inline-block;
+  padding: 1em 2em;
+  text-decoration: none;
+  font-family:var(--ff-h1);
+  font-weight: 400;
+  color: #0d0d0d;
+  transform: all 300ms ease-out;
+}
+
+.nav > .nav-links > a:hover {
+  text-transform:uppercase ;
+}
+
+.nav > #nav-check {
+  display: none;
+}
+.hr-p{
+  font-size: 3em;font-family: 'Prompt',sans-serif;font-weight: 200;margin:1em;
+}
+.logo{
+  width: 50px;
+}
+.hero_ic{
+  list-style-type: none;
+  position: absolute;
+  right: 0;
+  bottom:20px;
+
+}
+.hero_ic li a i{
+ 
+  font-size: 34px;
+  padding: .5em 1em;
+ color: #0d0d0d;
+}
+#btn{
+  display: none;
+  margin: 3px auto;
+  width: inherit;
+}
+
+.wrk img{
+ 
+  max-width: 350px;
+}
+@media (max-width:600px) {
+            body{
+              font-size: 18px;
+
+            }
+            .nav > .nav-btn {
+              display: inline-block;
+              position: absolute;
+              right: 0px;
+              top: 0px;
+            }
+            .nav > .nav-btn > label {
+              display: inline-block;
+              width: 50px;
+              height: 50px;
+              padding: 13px;
+            }
+            .nav > .nav-btn > label:hover,.nav  #nav-check:checked ~ .nav-btn > label {
+            cursor: pointer;
+            }
+            .nav > .nav-btn > label > span {
+              display: block;
+              width: 25px;
+              height: 10px;
+              border-top: 2px solid #0d0d0d;
+            }
+            .nav > .nav-links {
+              position: absolute;
+              display: block;
+              width: 100%;
+              background-color: #333;
+              height: 0px;
+              transition: all 0.3s ease-in-out;
+              overflow-y: hidden;
+              top: 50px;
+              left: 0px;
+            }
+            .nav > .nav-links > a {
+              display: block;
+              color: #F9F8F6;
+              padding: 13px 10px 13px 10px;
+              width: 100%;
+            }
+            .nav > #nav-check:not(:checked) ~ .nav-links {
+              height: 0px;
+            }
+            .nav > #nav-check:checked ~ .nav-links {
+              height: calc(100vh - 50vh);
+              overflow-y: auto;
+            }
+            .hero_ic{width: 170px;
+              margin:2em auto ;
+              display: block;
+              position: static;
+              right: auto;bottom: auto;
+              padding: 2px;
+              margin-bottom: 2em;
+            }
+            
+            .hero_ic li ,.hero_ic li a i{
+            list-style: none;
+            margin: 3px;
+            font-size: 24px;
+            display: inline-block;
+            color: #0d0d0d;
+            padding: 5px;
+            background-color: #d8d5d0a4;
+            border-radius: 50%;
+            border: none;
+            }
+            .logo{
+              width: 30px;
+            }
+
+
+            h1{font-size:36px;line-height: 70px;}
+            h2{font-size: 28px; letter-spacing: normal;}
+            h3{font-size: 22px; }
+            #btn{
+              display: block;
+              margin-bottom:1em;
+            }
+          .hr-p{
+            margin-top:3.5em;
+            top: 100px;
+            font-size: 1.3em;line-height: 40px;
+
+          }
+          .abt img{
+            display:none;
+          }
+          p{
+            line-height: normal;
+          }
+          .grid{
+            margin:2em 0em ;
+            
+          }
+          .wrk img{
+            max-width: 320px; 
+          }
+          .cntsec >ul,.cntsec li{
+            text-align: center;
+            list-style: none;
+            display: inline-block;
+            padding:5px;
+            color: #0d0d0d;
+            
+          }
+          #contact ul ,#contact li{
+            padding: 8px;
+          }
+    }
+/* end of the mobile responsive*/
+
+
+
+.grid{
+  margin: 2em;
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(320px,1fr));
+  gap: 20px;
+  
+}
+.grid p{
+  line-height: 40px;
+}
+.gr{
+  margin-bottom: 2em;
+}
+.mr{
+margin-right: 4px;
+}
+hr{
+  background-color: #333;
+ 
+}
+.material-icons.md-48{
+  font-size:48px;
+}
+.wrk p{
+  margin-right:1em;
+  line-height: 40px;
+}
+
+.btn{margin-top: 1em;
+  padding: 1em 2em;
+  font-size: 16px;
+  background-color: #44503C;
+  border:none;
+  transition: all 300ms ease-in-out;
+  
+  
+}
+.btn>a{
+  color: #F9F8F6;
+  text-decoration: none;
+  letter-spacing: 1px;
+}
+.btn:hover{
+  transform:scale(1.1);
+ cursor: pointer;
+ 
+box-shadow: 8px 8px #678850;
+
+}
+.abt_hr{
+  max-width: 300px;
+  margin: 1em;
+}
+.abt{
+  margin: 3em 0em;
+}
+.abt img{
+  width: 350px;
+  border: 3px solid #333;
+  box-shadow:13px 18px #333;
+}
+
+.cntsec{
+  align-items: center;
+  
+}
+.cntsec >ul,.cntsec li{
+  text-align: center;
+  list-style: none;
+  display: inline;
+  padding: .3em;
+  color: #0d0d0d;
+  
+}
+a{
+  color: #333; 
+}
+.cntsec ul a{
+  color: #333;
+  background: #d8d5d0a4;
+  padding: 3px 6px;
+  border-radius: 50%;
+  transition: background 300ms ease-in-out;
+}
+.cntsec ul a:hover{
+  background: #fffdfa11;
+}
